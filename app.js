@@ -54,7 +54,6 @@
     if (eventName === "Schedule" || eventName === "Contact") {
       trackConversion(eventName, {
         content_name: label,
-        currency: "ARS",
       });
     }
   });
