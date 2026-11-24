@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D0D" />
+
+  <!-- =========================================================================
+       SEO Y METADATOS BÁSICOS
+       ========================================================================= -->
+  <title>Pueblo Esther's Barber Shop | Turnos Online y Horario Corrido</title>
+  <meta
+    name="description"
+    content="Barbería profesional en Ruta 21 y 12 de Octubre, Pueblo Esther, Santa Fe. Turnos online a horario y sin esperas, ambiente familiar y horario corrido de martes a sábado."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Pueblo Esther's Barber Shop | Tu corte, a horario y sin esperas" />
+  <meta
+    property="og:description"
+    content="Reservá tu turno online en Ruta 21 y 12 de Octubre, Pueblo Esther. Planes prepagos para congelar tu precio y horario corrido de martes a sábado."
+  />
+  <meta property="og:image" content="./images/hero-local.jpg" />
+
+  <!-- =========================================================================
+       [1] GOOGLE TAG MANAGER (HEAD)
+       >>> PEGAR AQUÍ EL CÓDIGO <script> DE GOOGLE TAG MANAGER <<<
+       Ejemplo:
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+       ========================================================================= -->
+
+  <!-- =========================================================================
+       [2] PÍXEL DE META (FACEBOOK / INSTAGRAM ADS)
+       >>> PEGAR AQUÍ EL CÓDIGO BASE DEL PÍXEL DE META (fbq) <<<
+       Una vez pegado aquí, TODOS los botones de Wonoma dispararán automáticamente
+       fbq('track', 'Schedule') y los botones de WhatsApp dispararán fbq('track', 'Contact').
+       ========================================================================= -->
+
+  <!-- Preconexión a Google Fonts para carga ultra rápida -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS vía CDN (ligero, sin paso de build obligatorio para Vercel) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            carbon: "#0D0D0D",
+            surface: "#161616",
+            borderSubtle: "#262626",
+            gold: "#D4AF37",
+            goldHover: "#E5C158",
+            ink: "#F5F5F5",
+            muted: "#A3A3A3",
+          },
+          fontFamily: {
+            display: ["Oswald", "Impact", "sans-serif"],
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Estilos personalizados mínimos -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Datos estructurados Schema.org (SEO Local en Google) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "Pueblo Esther's Barber Shop",
+      "description": "Barbería profesional en Pueblo Esther, Santa Fe. Turnos programados online, ambiente limpio y familiar, horario corrido de martes a sábado.",
+      "url": "https://puebloesther.wonoma.com",
+      "telephone": "+5493402595364",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ruta 21 y 12 de Octubre",
+        "addressLocality": "Pueblo Esther",
+        "addressRegion": "Santa Fe",
+        "postalCode": "S2126",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.0802696,
+        "longitude": -60.5738944
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "16:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/estherbarberoficial"
+      ]
+    }
+  </script>
+</head>
+
+<body class="bg-[#0D0D0D] text-[#F5F5F5] font-sans antialiased selection:bg-[#D4AF37] selection:text-[#0D0D0D]">
+  <!-- =========================================================================
+       [1B] GOOGLE TAG MANAGER (NOSCRIPT)
+       >>> PEGAR AQUÍ EL <noscript> DE GOOGLE TAG MANAGER JUSTO DESPUÉS DE <body> <<<
+       ========================================================================= -->
+
+  <!-- =========================================================================
+       NAVBAR FIJA SUPERIOR
+       ========================================================================= -->
+  <header
+    id="navbar"
+    class="fixed top-0 inset-x-0 z-50 border-b border-transparent bg-[#0D0D0D]/80 backdrop-blur-md transition-all duration-200"
+  >
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-[72px] sm:h-20 gap-3">
+        <!-- Izquierda: Logo -->
+        <a
+          href="#inicio"
+          class="flex items-center gap-3 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded-md"
+          aria-label="Ir al inicio — Pueblo Esther's Barber Shop"
+        >
+          <img
+            src="./images/logo.png"
+            alt="Pueblo Esther's Barber Shop"
+            data-fallback="nav-logo-fallback"
+            class="h-10 sm:h-12 w-auto object-contain"
+          />
+          <div id="nav-logo-fallback" class="hidden items-center gap-2.5">
+            <span class="h-9 w-9 rounded-lg border border-[#D4AF37]/60 bg-[#161616] flex items-center justify-center font-display text-sm font-bold tracking-wider text-[#D4AF37]">
+              PE
+            </span>
+            <div class="leading-none">
+              <span class="block font-display text-sm sm:text-base font-bold tracking-[0.12em] uppercase text-[#F5F5F5]">
+                Pueblo Esther's
+              </span>
+              <span class="block text-[10px] tracking-[0.24em] uppercase text-[#D4AF37] mt-0.5">
+                Barber Shop
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Centro (Desktop): Enlaces de navegación -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+          <a href="#servicios" class="text-sm font-medium text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors">
+            Servicios
+          </a>
+          <a href="#equipo" class="text-sm font-medium text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors">
+            Equipo
+          </a>
+          <a href="#nosotros" class="text-sm font-medium text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors">
+            Nosotros
+          </a>
+          <a href="#ubicacion" class="text-sm font-medium text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors">
+            Ubicación
+          </a>
+        </nav>
+
+        <!-- Derecha: Botón Reservar Turno + Menú Móvil -->
+        <div class="flex items-center gap-2.5">
+          <a
+            href="https://puebloesther.wonoma.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="Schedule"
+            data-track-label="Navbar Reservar Turno"
+            class="inline-flex items-center justify-center rounded-lg bg-[#D4AF37] hover:bg-[#E5C158] active:scale-[0.98] text-[#0D0D0D] font-bold text-xs sm:text-sm tracking-[0.06em] uppercase px-3.5 sm:px-5 py-2.5 transition-all duration-200 shadow-md shadow-[#D4AF37]/15 whitespace-nowrap"
+          >
+            Reservar Turno
+          </a>
+
+          <!-- Botón hamburguesa solo en mobile -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-[#262626] bg-[#161616] text-[#F5F5F5] hover:border-[#D4AF37]/60 transition-colors"
+          >
+            <svg id="menu-icon-open" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <nav
+      id="mobile-menu"
+      aria-label="Navegación móvil"
+      class="hidden md:hidden border-t border-[#262626] bg-[#0D0D0D]/98 backdrop-blur-lg"
+    >
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a href="#servicios" class="px-3 py-3 rounded-lg text-base font-medium text-[#F5F5F5] hover:bg-[#161616] hover:text-[#D4AF37] transition-colors">
+          Servicios y Planes
+        </a>
+        <a href="#equipo" class="px-3 py-3 rounded-lg text-base font-medium text-[#F5F5F5] hover:bg-[#161616] hover:text-[#D4AF37] transition-colors">
+          Nuestro Equipo
+        </a>
+        <a href="#nosotros" class="px-3 py-3 rounded-lg text-base font-medium text-[#F5F5F5] hover:bg-[#161616] hover:text-[#D4AF37] transition-colors">
+          Acerca Nuestro
+        </a>
+        <a href="#ubicacion" class="px-3 py-3 rounded-lg text-base font-medium text-[#F5F5F5] hover:bg-[#161616] hover:text-[#D4AF37] transition-colors">
+          Horarios y Ubicación
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         SECCIÓN 1: HERO (PRIMERA PANTALLA)
+         ======================================================================= -->
+    <section
+      id="inicio"
+      class="relative min-h-[100svh] flex items-center pt-24 pb-16 sm:pt-28 sm:pb-20 overflow-hidden bg-industrial-grid"
+    >
+      <!-- Imagen de fondo del local + degradado oscuro para legibilidad perfecta -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="./images/hero-local.jpg"
+          alt="Interior de Pueblo Esther's Barber Shop"
+          data-fallback="hero-bg-fallback"
+          fetchpriority="high"
+          class="w-full h-full object-cover object-center opacity-50"
+        />
+        <!-- Fallback ambiental si aún no se subió hero-local.jpg -->
+        <div
+          id="hero-bg-fallback"
+          class="hidden w-full h-full items-center justify-center bg-[radial-gradient(ellipse_at_top_right,_rgba(212,175,55,0.14)_0%,_rgba(13,13,13,0.95)_58%,_#0D0D0D_100%)]"
+          aria-hidden="true"
+        ></div>
+        <!-- Capas de degradado oscuro -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/85 via-[#0D0D0D]/70 to-[#0D0D0D]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0D0D0D]/90 via-[#0D0D0D]/55 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-2xl">
+          <!-- Etiqueta superior dorada -->
+          <div class="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/35 bg-[#0D0D0D]/75 px-3.5 py-1.5 backdrop-blur-sm mb-6">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true"></span>
+            <span class="text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#D4AF37]">
+              PUEBLO ESTHER • DESDE 2021
+            </span>
+          </div>
+
+          <!-- H1 Principal -->
+          <h1 class="font-display text-4xl sm:text-6xl lg:text-[4.25rem] font-bold uppercase tracking-tight leading-[1.04] text-[#F5F5F5]">
+            Tu corte, a horario y sin esperas.
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="mt-5 sm:mt-6 text-base sm:text-lg lg:text-xl text-[#D4D4D4] leading-relaxed max-w-xl">
+            Barbería profesional en Ruta 21 y 12 de Octubre. Un espacio cómodo, limpio y familiar, ahora en horario corrido de martes a sábado.
+          </p>
+
+          <!-- Botones CTA -->
+          <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+            <a
+              href="https://puebloesther.wonoma.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="Schedule"
+              data-track-label="Hero Reservar Turno Ahora"
+              class="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#E5C158] active:scale-[0.98] text-[#0D0D0D] font-bold text-sm sm:text-base tracking-[0.08em] uppercase px-7 py-4 transition-all duration-200 shadow-xl shadow-[#D4AF37]/20"
+            >
+              <span>RESERVAR TURNO AHORA</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+
+            <a
+              href="#servicios"
+              class="inline-flex items-center justify-center rounded-xl border border-[#F5F5F5]/25 hover:border-[#D4AF37] bg-[#0D0D0D]/55 hover:bg-[#161616] text-[#F5F5F5] hover:text-[#D4AF37] font-semibold text-sm sm:text-base tracking-[0.07em] uppercase px-7 py-4 transition-all duration-200 backdrop-blur-sm"
+            >
+              VER SERVICIOS Y PLANES
+            </a>
+          </div>
+
+          <!-- Datos rápidos de confianza -->
+          <div class="mt-10 pt-7 border-t border-[#262626]/80 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-xl text-xs sm:text-sm text-[#A3A3A3]">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D4AF37] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Turnos a horario</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D4AF37] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              <span>Horario corrido Mar–Sáb</span>
+            </div>
+            <div class="col-span-2 sm:col-span-1 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D4AF37] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <span>Ruta 21 y 12 de Octubre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 2: SERVICIOS Y PLANES PREPAGOS (PESTAÑAS INTERACTIVAS)
+         ======================================================================= -->
+    <section id="servicios" class="py-20 sm:py-24 bg-[#161616] border-t border-[#262626]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado de sección -->
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="inline-block text-xs font-semibold uppercase tracking-[0.22em] text-[#D4AF37] mb-3">
+            Tarifas y Planes Prepagos
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#F5F5F5]">
+            Elegí tu nivel y reservá
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-[#A3A3A3] leading-relaxed">
+            Trabajamos por niveles de experiencia para que elijas al barbero ideal para vos. Si venís seguido, aprovechá nuestros Planes Prepagos y congelá tu precio.
+          </p>
+        </div>
+
+        <!-- Barra de pestañas (generada dinámicamente desde servicios.js) -->
+        <div class="mt-10 sm:mt-12 reveal">
+          <div
+            id="services-tablist"
+            role="tablist"
+            aria-label="Niveles de barberos"
+            class="grid grid-cols-3 gap-1.5 sm:gap-2 p-1.5 rounded-xl bg-[#0D0D0D] border border-[#262626]"
+          >
+            <!-- Se renderiza desde app.js / servicios.js -->
+          </div>
+
+          <!-- Panel de servicios y planes prepagos -->
+          <div
+            id="services-panel"
+            role="tabpanel"
+            tabindex="0"
+            class="mt-6 rounded-2xl border border-[#262626] bg-[#0D0D0D] p-5 sm:p-8 lg:p-10 shadow-2xl shadow-black/40"
+          >
+            <!-- Se renderiza desde app.js / servicios.js -->
+            <noscript>
+              <p class="text-center text-sm text-[#A3A3A3]">
+                Activá JavaScript para ver las tarifas por nivel o reservá directamente en
+                <a href="https://puebloesther.wonoma.com" class="text-[#D4AF37] underline">Wonoma</a>.
+              </p>
+            </noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 3: NUESTRO EQUIPO
+         ======================================================================= -->
+    <section id="equipo" class="py-20 sm:py-24 bg-[#0D0D0D] border-t border-[#262626]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado -->
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="inline-block text-xs font-semibold uppercase tracking-[0.22em] text-[#D4AF37] mb-3">
+            Nuestro Equipo
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#F5F5F5]">
+            Conocé a quienes te atienden
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-[#A3A3A3]">
+            Tres profesionales, un mismo estándar de calidad y puntualidad.
+          </p>
+        </div>
+
+        <!-- Grilla de 3 tarjetas -->
+        <div class="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Tarjeta 1: Nacho — Director -->
+          <article class="reveal group rounded-2xl border border-[#262626] bg-[#161616] overflow-hidden flex flex-col transition-all duration-300 hover:border-[#D4AF37]/50">
+            <div class="relative aspect-[4/5] bg-[#111111] overflow-hidden">
+              <img
+                src="./images/nacho.jpg"
+                alt="Nacho — Director de Pueblo Esther's Barber Shop"
+                loading="lazy"
+                data-fallback="fallback-nacho"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <!-- Fallback elegante si aún no se cargó nacho.jpg -->
+              <div
+                id="fallback-nacho"
+                class="hidden absolute inset-0 flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-[#1A1A1A] via-[#131313] to-[#0D0D0D]"
+              >
+                <div class="h-24 w-24 rounded-full border border-[#D4AF37]/50 bg-[#0D0D0D] flex items-center justify-center font-display text-3xl font-bold text-[#D4AF37] tracking-wider shadow-inner">
+                  N
+                </div>
+                <span class="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D4AF37]">
+                  Director
+                </span>
+                <span class="mt-1 text-xs text-[#737373]">Pueblo Esther's Barber Shop</span>
+              </div>
+              <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#161616] via-[#161616]/50 to-transparent pointer-events-none"></div>
+              <span class="absolute top-4 left-4 inline-flex items-center rounded-md bg-[#0D0D0D]/85 border border-[#D4AF37]/45 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#D4AF37] backdrop-blur-sm">
+                Director
+              </span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-display text-2xl font-bold uppercase tracking-wide text-[#F5F5F5]">
+                  Nacho <span class="text-[#D4AF37] font-medium">— Director</span>
+                </h3>
+                <p class="mt-3 text-sm text-[#A3A3A3] leading-relaxed">
+                  Fundador y referente del estudio. Precisión, asesoramiento integral y el máximo nivel de detalle en cada corte y barba.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#262626] flex items-center justify-between gap-3">
+                <a
+                  href="#servicios"
+                  data-select-tier="director"
+                  class="text-xs font-semibold uppercase tracking-[0.12em] text-[#D4AF37] hover:text-[#E5C158] transition-colors"
+                >
+                  Ver tarifas de Nacho →
+                </a>
+                <a
+                  href="https://puebloesther.wonoma.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track="Schedule"
+                  data-track-label="Equipo Reservar Nacho"
+                  class="text-xs font-semibold uppercase tracking-[0.1em] text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
+                >
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Facu — Senior -->
+          <article class="reveal group rounded-2xl border border-[#262626] bg-[#161616] overflow-hidden flex flex-col transition-all duration-300 hover:border-[#D4AF37]/50">
+            <div class="relative aspect-[4/5] bg-[#111111] overflow-hidden">
+              <img
+                src="./images/facu.jpg"
+                alt="Facu — Barbero Senior en Pueblo Esther's Barber Shop"
+                loading="lazy"
+                data-fallback="fallback-facu"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <!-- Fallback elegante si aún no se cargó facu.jpg -->
+              <div
+                id="fallback-facu"
+                class="hidden absolute inset-0 flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-[#1A1A1A] via-[#131313] to-[#0D0D0D]"
+              >
+                <div class="h-24 w-24 rounded-full border border-[#D4AF37]/50 bg-[#0D0D0D] flex items-center justify-center font-display text-3xl font-bold text-[#D4AF37] tracking-wider shadow-inner">
+                  F
+                </div>
+                <span class="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D4AF37]">
+                  Senior
+                </span>
+                <span class="mt-1 text-xs text-[#737373]">Pueblo Esther's Barber Shop</span>
+              </div>
+              <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#161616] via-[#161616]/50 to-transparent pointer-events-none"></div>
+              <span class="absolute top-4 left-4 inline-flex items-center rounded-md bg-[#0D0D0D]/85 border border-[#D4AF37]/45 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#D4AF37] backdrop-blur-sm">
+                Senior
+              </span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-display text-2xl font-bold uppercase tracking-wide text-[#F5F5F5]">
+                  Facu <span class="text-[#D4AF37] font-medium">— Senior</span>
+                </h3>
+                <p class="mt-3 text-sm text-[#A3A3A3] leading-relaxed">
+                  Experiencia consolidada y dominio técnico en cortes clásicos, fades modernos y perfilado de barba.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#262626] flex items-center justify-between gap-3">
+                <a
+                  href="#servicios"
+                  data-select-tier="senior"
+                  class="text-xs font-semibold uppercase tracking-[0.12em] text-[#D4AF37] hover:text-[#E5C158] transition-colors"
+                >
+                  Ver tarifas de Facu →
+                </a>
+                <a
+                  href="https://puebloesther.wonoma.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track="Schedule"
+                  data-track-label="Equipo Reservar Facu"
+                  class="text-xs font-semibold uppercase tracking-[0.1em] text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
+                >
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3: Maxi — Staff -->
+          <article class="reveal group rounded-2xl border border-[#262626] bg-[#161616] overflow-hidden flex flex-col transition-all duration-300 hover:border-[#D4AF37]/50">
+            <div class="relative aspect-[4/5] bg-[#111111] overflow-hidden">
+              <img
+                src="./images/maxi.jpg"
+                alt="Maxi — Barbero Staff en Pueblo Esther's Barber Shop"
+                loading="lazy"
+                data-fallback="fallback-maxi"
+                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <!-- Fallback elegante si aún no se cargó maxi.jpg -->
+              <div
+                id="fallback-maxi"
+                class="hidden absolute inset-0 flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-[#1A1A1A] via-[#131313] to-[#0D0D0D]"
+              >
+                <div class="h-24 w-24 rounded-full border border-[#D4AF37]/50 bg-[#0D0D0D] flex items-center justify-center font-display text-3xl font-bold text-[#D4AF37] tracking-wider shadow-inner">
+                  M
+                </div>
+                <span class="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D4AF37]">
+                  Staff
+                </span>
+                <span class="mt-1 text-xs text-[#737373]">Pueblo Esther's Barber Shop</span>
+              </div>
+              <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#161616] via-[#161616]/50 to-transparent pointer-events-none"></div>
+              <span class="absolute top-4 left-4 inline-flex items-center rounded-md bg-[#0D0D0D]/85 border border-[#D4AF37]/45 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#D4AF37] backdrop-blur-sm">
+                Staff
+              </span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-display text-2xl font-bold uppercase tracking-wide text-[#F5F5F5]">
+                  Maxi <span class="text-[#D4AF37] font-medium">— Staff</span>
+                </h3>
+                <p class="mt-3 text-sm text-[#A3A3A3] leading-relaxed">
+                  Prolijidad, técnica actualizada y atención dedicada para que salgas impecable en cada visita.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#262626] flex items-center justify-between gap-3">
+                <a
+                  href="#servicios"
+                  data-select-tier="staff"
+                  class="text-xs font-semibold uppercase tracking-[0.12em] text-[#D4AF37] hover:text-[#E5C158] transition-colors"
+                >
+                  Ver tarifas de Maxi →
+                </a>
+                <a
+                  href="https://puebloesther.wonoma.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track="Schedule"
+                  data-track-label="Equipo Reservar Maxi"
+                  class="text-xs font-semibold uppercase tracking-[0.1em] text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
+                >
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 4: ACERCA NUESTRO
+         ======================================================================= -->
+    <section id="nosotros" class="py-20 sm:py-24 bg-[#161616] border-t border-[#262626]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <!-- Columna izquierda: Historia y pilares -->
+          <div class="lg:col-span-6 reveal">
+            <span class="inline-block text-xs font-semibold uppercase tracking-[0.22em] text-[#D4AF37] mb-3">
+              Acerca Nuestro
+            </span>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#F5F5F5] leading-[1.08]">
+              Más que un corte, un momento para vos
+            </h2>
+
+            <div class="mt-6 space-y-4 text-sm sm:text-base text-[#A3A3A3] leading-relaxed">
+              <p>
+                Abrimos nuestras puertas en febrero de 2021 con una idea simple: crear en Pueblo Esther una barbería donde te sientas cómodo desde que entrás hasta que salís.
+              </p>
+              <p>
+                Nos destacamos por mantener un ambiente familiar, limpio y cuidado, pensado para que grandes y chicos disfruten su visita. Pero, por sobre todo, respetamos tu tiempo: trabajamos con turnos programados para que te sientes a horario, sin demoras eternas ni improvisaciones.
+              </p>
+            </div>
+
+            <!-- 3 ítems con íconos minimalistas en dorado -->
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-4 rounded-xl border border-[#262626] bg-[#0D0D0D] p-4">
+                <div class="shrink-0 h-10 w-10 rounded-lg bg-[#D4AF37]/12 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37]" aria-hidden="true">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm sm:text-base font-semibold text-[#F5F5F5]">
+                    Puntualidad garantizada
+                  </h3>
+                  <p class="text-sm text-[#A3A3A3] mt-0.5">
+                    Turnos online sin esperas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 rounded-xl border border-[#262626] bg-[#0D0D0D] p-4">
+                <div class="shrink-0 h-10 w-10 rounded-lg bg-[#D4AF37]/12 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37]" aria-hidden="true">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm sm:text-base font-semibold text-[#F5F5F5]">
+                    Ambiente familiar y limpio
+                  </h3>
+                  <p class="text-sm text-[#A3A3A3] mt-0.5">
+                    Higiene y comodidad en cada detalle.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 rounded-xl border border-[#262626] bg-[#0D0D0D] p-4">
+                <div class="shrink-0 h-10 w-10 rounded-lg bg-[#D4AF37]/12 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37]" aria-hidden="true">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm sm:text-base font-semibold text-[#F5F5F5]">
+                    Horario corrido
+                  </h3>
+                  <p class="text-sm text-[#A3A3A3] mt-0.5">
+                    De martes a sábado, adaptados a tu rutina.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Collage fotográfico -->
+          <div class="lg:col-span-6 reveal">
+            <div class="grid grid-cols-12 gap-4 items-center">
+              <!-- Foto 1: Equipo general -->
+              <div class="col-span-7 relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#262626] bg-[#0D0D0D] shadow-2xl shadow-black/50">
+                <img
+                  src="./images/equipo-general.jpg"
+                  alt="Equipo de Pueblo Esther's Barber Shop"
+                  loading="lazy"
+                  data-fallback="fallback-equipo-general"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  id="fallback-equipo-general"
+                  class="hidden absolute inset-0 flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D]"
+                >
+                  <svg class="w-10 h-10 text-[#D4AF37]/70 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                  <span class="font-display text-sm uppercase tracking-[0.18em] text-[#D4AF37]">Nuestro Espacio</span>
+                  <span class="text-xs text-[#737373] mt-1">Desde Febrero 2021</span>
+                </div>
+              </div>
+
+              <!-- Columna derecha del collage: Herramientas + badge "Desde 2021" -->
+              <div class="col-span-5 flex flex-col gap-4">
+                <div class="relative aspect-[3/4] rounded-2xl overflow-hidden border border-[#262626] bg-[#0D0D0D] shadow-2xl shadow-black/50">
+                  <img
+                    src="./images/acerca-herramientas.jpg"
+                    alt="Herramientas profesionales de barbería"
+                    loading="lazy"
+                    data-fallback="fallback-herramientas"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    id="fallback-herramientas"
+                    class="hidden absolute inset-0 flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-[#1C1C1C] to-[#0D0D0D]"
+                  >
+                    <svg class="w-9 h-9 text-[#D4AF37]/70 mb-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.848 8.25l1.536.887M7.848 8.25a3 3 0 11-5.196-3 3 3 0 015.196 3zm1.536.887a2.165 2.165 0 011.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 11-5.196 3 3 3 0 015.196-3zm1.536-.887a2.165 2.165 0 001.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863l2.077-1.199m0-3.328a4.323 4.323 0 012.068-1.379l5.325-1.628a4.5 4.5 0 012.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.331 4.331 0 0010.607 12m3.736 0l7.794 4.5-.802.215a4.5 4.5 0 01-2.48-.043l-5.326-1.629a4.324 4.324 0 01-2.068-1.379M14.343 12l-2.882 1.664" />
+                    </svg>
+                    <span class="font-display text-xs uppercase tracking-[0.16em] text-[#D4AF37]">Precisión</span>
+                  </div>
+                </div>
+
+                <!-- Badge industrial dorado -->
+                <div class="rounded-2xl border border-[#D4AF37]/45 bg-[#0D0D0D] p-4 sm:p-5 text-center">
+                  <span class="block font-display text-2xl sm:text-3xl font-bold text-[#D4AF37] leading-none">
+                    DESDE 2021
+                  </span>
+                  <span class="block text-[11px] sm:text-xs uppercase tracking-[0.16em] text-[#A3A3A3] mt-1.5">
+                    En Pueblo Esther
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 5: HORARIOS, UBICACIÓN Y CONTACTO
+         ======================================================================= -->
+    <section id="ubicacion" class="py-20 sm:py-24 bg-[#0D0D0D] border-t border-[#262626]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado -->
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="inline-block text-xs font-semibold uppercase tracking-[0.22em] text-[#D4AF37] mb-3">
+            Horarios, Ubicación y Contacto
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#F5F5F5]">
+            Vení a conocernos
+          </h2>
+        </div>
+
+        <div class="mt-12 sm:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Columna izquierda: Dirección, horarios y canales -->
+          <div class="lg:col-span-5 reveal rounded-2xl border border-[#262626] bg-[#161616] p-6 sm:p-8 flex flex-col justify-between gap-7">
+            <div class="space-y-7">
+              <!-- Dirección -->
+              <div>
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37] mb-2">
+                  Dirección
+                </h3>
+                <p class="text-base sm:text-lg font-medium text-[#F5F5F5] leading-snug">
+                  Ruta 21 y 12 de Octubre, S2126 Pueblo Esther, Santa Fe.
+                </p>
+              </div>
+
+              <!-- Horarios -->
+              <div>
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37] mb-3">
+                  Horarios de atención
+                </h3>
+                <ul class="space-y-2.5 text-sm">
+                  <li
+                    data-schedule-days="1"
+                    class="flex items-center justify-between gap-3 rounded-lg border border-[#262626] bg-[#0D0D0D] px-3.5 py-2.5 transition-colors"
+                  >
+                    <span class="font-medium text-[#F5F5F5] flex items-center gap-2">
+                      Lunes
+                      <span data-today-badge class="hidden text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D4AF37] text-[#0D0D0D]">Hoy</span>
+                    </span>
+                    <span class="text-[#A3A3A3] text-right">16:00 a 20:00 hs</span>
+                  </li>
+                  <li
+                    data-schedule-days="2,3,4,5"
+                    class="flex items-center justify-between gap-3 rounded-lg border border-[#262626] bg-[#0D0D0D] px-3.5 py-2.5 transition-colors"
+                  >
+                    <span class="font-medium text-[#F5F5F5] flex items-center gap-2">
+                      Martes a Viernes
+                      <span data-today-badge class="hidden text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D4AF37] text-[#0D0D0D]">Hoy</span>
+                    </span>
+                    <span class="text-[#F5F5F5] text-right">
+                      10:00 a 20:00 hs
+                      <span class="block text-[11px] text-[#D4AF37]">horario corrido</span>
+                    </span>
+                  </li>
+                  <li
+                    data-schedule-days="6"
+                    class="flex items-center justify-between gap-3 rounded-lg border border-[#262626] bg-[#0D0D0D] px-3.5 py-2.5 transition-colors"
+                  >
+                    <span class="font-medium text-[#F5F5F5] flex items-center gap-2">
+                      Sábados
+                      <span data-today-badge class="hidden text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D4AF37] text-[#0D0D0D]">Hoy</span>
+                    </span>
+                    <span class="text-[#F5F5F5] text-right">
+                      09:00 a 20:00 hs
+                      <span class="block text-[11px] text-[#D4AF37]">horario corrido</span>
+                    </span>
+                  </li>
+                  <li
+                    data-schedule-days="0"
+                    class="flex items-center justify-between gap-3 rounded-lg border border-[#262626] bg-[#0D0D0D] px-3.5 py-2.5 transition-colors"
+                  >
+                    <span class="font-medium text-[#A3A3A3] flex items-center gap-2">
+                      Domingos
+                      <span data-today-badge class="hidden text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D4AF37] text-[#0D0D0D]">Hoy</span>
+                    </span>
+                    <span class="text-[#737373] text-right">Cerrado</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Botón Google Maps + Redes -->
+            <div class="space-y-3 pt-2">
+              <a
+                href="https://www.google.com/maps/place/Pueblo+Esther's+Barber+Shop/@-33.0802691,-60.591917,15z/data=!4m20!1m13!4m12!1m4!2m2!1d-60.5566762!2d-33.0805635!4e1!1m6!1m2!1s0x95b7092fe3a7ddd3:0xdc8f27cbe93b921a!2sPueblo+Esther's+Barber+Shop,+ruta+21+y,+12+de+Octubre,+S2126+Pueblo+Esther,+Santa+Fe,+Argentina!2m2!1d-60.5738944!2d-33.0802696!3m5!1s0x95b7092fe3a7ddd3:0xdc8f27cbe93b921a!8m2!3d-33.0802696!4d-60.5738944!16s%2Fg%2F11r113zpym"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#E5C158] active:scale-[0.98] text-[#0D0D0D] font-bold text-sm tracking-[0.06em] uppercase px-5 py-3.5 transition-all duration-200"
+              >
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <span>Cómo llegar en Google Maps</span>
+              </a>
+
+              <div class="grid grid-cols-2 gap-3">
+                <a
+                  href="https://instagram.com/estherbarberoficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 rounded-xl border border-[#262626] hover:border-[#D4AF37]/60 bg-[#0D0D0D] hover:bg-[#1A1A1A] text-[#F5F5F5] text-sm font-medium px-4 py-3 transition-colors"
+                >
+                  <svg class="w-4 h-4 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+
+                <a
+                  href="https://wa.me/5493402595364"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track="Contact"
+                  data-track-label="Ubicación Botón WhatsApp"
+                  class="inline-flex items-center justify-center gap-2 rounded-xl border border-[#262626] hover:border-[#D4AF37]/60 bg-[#0D0D0D] hover:bg-[#1A1A1A] text-[#F5F5F5] text-sm font-medium px-4 py-3 transition-colors"
+                >
+                  <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.33-1.66a11.87 11.87 0 005.73 1.46h.01c6.55 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.42zM12.07 21.8h-.01a9.9 9.9 0 01-5.04-1.38l-.36-.21-3.76.99 1-3.66-.24-.38a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.65 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.46-4.44 9.89-9.88 9.89zm5.42-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Mapa interactivo incrustado con filtro oscuro -->
+          <div class="lg:col-span-7 reveal map-container relative rounded-2xl overflow-hidden border border-[#262626] bg-[#161616] min-h-[360px] lg:min-h-[480px]">
+            <iframe
+              title="Mapa de ubicación de Pueblo Esther's Barber Shop en Ruta 21 y 12 de Octubre, Pueblo Esther"
+              src="https://www.google.com/maps?q=Pueblo+Esther's+Barber+Shop,+Ruta+21+y+12+de+Octubre,+Pueblo+Esther,+Santa+Fe&ll=-33.0802696,-60.5738944&z=16&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="map-dark-filter w-full h-full min-h-[360px] lg:min-h-[480px] border-0"
+              allowfullscreen
+            ></iframe>
+            <div class="pointer-events-none absolute top-4 left-4 rounded-lg bg-[#0D0D0D]/90 border border-[#262626] px-3 py-1.5 backdrop-blur-sm">
+              <span class="text-xs font-medium text-[#F5F5F5]">Ruta 21 y 12 de Octubre · Pueblo Esther</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER MINIMALISTA
+       ========================================================================= -->
+  <footer class="bg-[#0D0D0D] border-t border-[#262626]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <!-- Logo Footer -->
+        <a href="#inicio" class="flex items-center gap-3" aria-label="Volver arriba — Pueblo Esther's Barber Shop">
+          <img
+            src="./images/logo.png"
+            alt="Pueblo Esther's Barber Shop"
+            data-fallback="footer-logo-fallback"
+            class="h-9 w-auto object-contain opacity-90"
+          />
+          <div id="footer-logo-fallback" class="hidden items-center gap-2">
+            <span class="h-8 w-8 rounded-md border border-[#D4AF37]/50 bg-[#161616] flex items-center justify-center font-display text-xs font-bold text-[#D4AF37]">
+              PE
+            </span>
+            <span class="font-display text-sm font-bold tracking-[0.14em] uppercase text-[#F5F5F5]">
+              Pueblo Esther's Barber Shop
+            </span>
+          </div>
+        </a>
+
+        <!-- Copyright -->
+        <p class="text-xs sm:text-sm text-[#A3A3A3] text-center">
+          © <span id="current-year">2026</span> Pueblo Esther's Barber Shop. Todos los derechos reservados.
+        </p>
+
+        <!-- Link a Wonoma -->
+        <a
+          href="https://puebloesther.wonoma.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track="Schedule"
+          data-track-label="Footer Wonoma"
+          class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#D4AF37] hover:text-[#E5C158] transition-colors"
+        >
+          <span>Reservar en Wonoma</span>
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (ABAJO A LA DERECHA)
+       ========================================================================= -->
+  <a
+    href="https://wa.me/5493402595364?text=Hola!%20Quisiera%20hacer%20una%20consulta%20sobre%20los%20turnos."
+    target="_blank"
+    rel="noopener noreferrer"
+    data-track="Contact"
+    data-track-label="Botón Flotante WhatsApp"
+    aria-label="Hacer una consulta por WhatsApp"
+    class="whatsapp-pulse fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 group inline-flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-2xl shadow-black/60 transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+  >
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.33-1.66a11.87 11.87 0 005.73 1.46h.01c6.55 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.42zM12.07 21.8h-.01a9.9 9.9 0 01-5.04-1.38l-.36-.21-3.76.99 1-3.66-.24-.38a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.65 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.46-4.44 9.89-9.88 9.89zm5.42-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+    <span class="pointer-events-none hidden sm:block absolute right-16 whitespace-nowrap rounded-lg border border-[#262626] bg-[#161616] px-3 py-1.5 text-xs font-medium text-[#F5F5F5] opacity-0 translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 shadow-lg">
+      ¿Consultas sobre turnos?
+    </span>
+  </a>
+
+  <!-- Scripts (primero configuración de precios, luego lógica principal) -->
+  <script src="./servicios.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* ============================================================================
+   PUEBLO ESTHER'S BARBER SHOP — ESTILOS PERSONALIZADOS
+   Estética industrial-vintage moderna | Mobile-First | Sin dependencias pesadas
+   ============================================================================ */
+
+:root {
+  --bg-main: #0D0D0D;
+  --bg-surface: #161616;
+  --border-subtle: #262626;
+  --gold: #D4AF37;
+  --gold-hover: #E5C158;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A3A3A3;
+}
+
+/* Base crítica para evitar destello blanco antes de cargar Tailwind */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Scroll offset para anclas con navbar fija */
+section[id] {
+  scroll-margin-top: 5.25rem;
+}
+
+/* Tipografía de títulos */
+.font-display {
+  font-family: 'Oswald', Impact, sans-serif;
+}
+
+/* Textura industrial sutil para fondos sin sobrecargar rendimiento */
+.bg-industrial-grid {
+  background-image:
+    radial-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 13, 13, 0.96), rgba(13, 13, 13, 1));
+  background-size: 28px 28px, 100% 100%;
+}
+
+/* Estado navbar con scroll */
+.navbar-scrolled {
+  background-color: rgba(13, 13, 13, 0.94);
+  border-bottom-color: rgba(38, 38, 38, 0.95);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.75);
+}
+
+/* Animación suave para el cambio de pestañas de Servicios */
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-panel-animate {
+  animation: panelFadeIn 280ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Separador dorado industrial */
+.gold-hairline {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
+}
+
+/* Tarjeta destacada de Planes Prepagos con brillo sutil */
+.plan-card-glow {
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(212, 175, 55, 0.09) 0%, rgba(22, 22, 22, 0) 60%),
+    #141414;
+}
+
+/* Filtro oscuro elegante para el iframe de Google Maps */
+.map-dark-filter {
+  filter: grayscale(100%) invert(92%) contrast(88%) brightness(92%) hue-rotate(180deg);
+  transition: filter 300ms ease;
+}
+
+.map-container:hover .map-dark-filter {
+  filter: grayscale(55%) invert(92%) contrast(92%) brightness(96%) hue-rotate(180deg);
+}
+
+/* Botón flotante de WhatsApp con pulso discreto */
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+}
+
+.whatsapp-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #25D366;
+  z-index: -1;
+  animation: whatsappPulse 2.6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+/* Revelado sutil al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respeto a usuarios con preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .tab-panel-animate,
+  .whatsapp-pulse::before {
+    animation: none;
+  }
+}
+
+/* Scrollbar sutil en navegadores compatibles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2B2B2B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
